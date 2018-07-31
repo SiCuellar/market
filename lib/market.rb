@@ -50,6 +50,15 @@ class Market
   end
 
   def sell(item, quantity)
+    item_amount = @vendors.map do |vendor|
+      vendor.check_stock(item)
+    end
+    # I how can i check the updated value?
+
+    #maybe do a loop do until the condition is met?
+    item_amount.map do |amount|
+      if amount <
+
 
   end
 

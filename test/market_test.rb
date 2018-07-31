@@ -112,6 +112,7 @@ class MarketTest < Minitest::Test
   end
 
   def test_it_can_sell_items_in_vendor_order
+
     market = Market.new("South Pearl Street Farmers Market")
 
     vendor_1 = Vendor.new("Rocky Mountain Fresh")
@@ -131,6 +132,7 @@ class MarketTest < Minitest::Test
 
     assert_equal false, market.sell("Peaches", 200)
     assert_equal false, market.sell("Onions", 1)
+    assert_equal true , market.sell("Banana Nice Cream", 5)
 
 
 
